@@ -1,0 +1,62 @@
+/* числа */
+.range_wrap {
+  color: #a298fa;
+  display: flex;
+  flex-wrap: wrap;
+  font: 13px 'Trebuchet MS';
+  justify-content: space-between;
+  margin: 100px auto;
+  position: relative;
+  width: 300px;
+}
+
+input[type="range"] {
+  display: block;
+  height: 15px;
+  outline: none;
+  width: 100%; 
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* ползунок, кружок*/
+input[type="range"]::-webkit-slider-thumb {
+  background: #f7e9e9;
+  border: 7px solid #bb58b9;
+  border-radius: 50%;
+  box-shadow: 0 0 3px #93bb58;
+  height: 10px;
+  margin-top: -6px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 10px;
+  -webkit-appearance: none;
+}
+/* тень*/
+.range_wrap:hover input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0 0 17px 2px #bb58af;
+  height: 20px;
+  margin-top: -9px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 20px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #bb58b4;
+  height: 2px;
+}
+
+.range_label {
+  background: #ffffff;
+  border-radius: 4px;
+  bottom: 40px;
+  color: #9186f1;
+  font: bold 16px 'Trebuchet MS';
+  left: -24px;
+  padding: 4px 10px;
+  position: absolute;
+  transition: border 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* рамка окошка*/
+.range_wrap:hover .range_label {
+  border: 2px solid #b8a1e7;
+  transition: border 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
